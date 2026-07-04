@@ -196,6 +196,7 @@
   /* ---------- ABOUT ---------- */
   #about{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  .about-inner{grid-column:1/-1;display:grid;grid-template-columns:1.3fr 1fr;gap:64px;}
   .about-copy p{color:var(--muted);margin-bottom:18px;font-size:16px;}
   .about-copy strong{color:var(--text);font-weight:600;}
   .stat-list{display:flex;flex-direction:column;gap:0;border-top:1px solid var(--line);}
@@ -396,6 +397,7 @@
     .hero-mark{order:-1;max-width:220px;margin:0 auto 20px;}
     .hero-mark img{max-width:180px;}
     .about-grid{grid-template-columns:1fr;gap:40px;}
+    .about-inner{grid-template-columns:1fr;gap:32px;}
     .services-split{grid-template-columns:1fr;}
     .portfolio-grid{grid-template-columns:1fr 1fr;}
     .process-grid{grid-template-columns:1fr 1fr;}
@@ -456,7 +458,7 @@
       <span class="section-num"><strong>01</strong> — Chi sono</span>
       <h2>Un solo interlocutore, dal logo al codice.</h2>
     </div>
-    <div class="about-copy" style="grid-column:1/-1;display:grid;grid-template-columns:1.3fr 1fr;gap:64px;">
+    <div class="about-copy about-inner">
       <div>
         <p>Lavoro come <strong>designer grafico e sviluppatore web</strong>: mi occupo di identità visiva, brand identity e materiali di comunicazione, e trasformo tutto questo in siti e applicazioni web funzionanti.</p>
         <p>Il vantaggio di avere entrambe le competenze è che un design nasce già pensando a come verrà costruito, e un sito viene sviluppato rispettando davvero l'identità del brand — senza compromessi in nessuna delle due direzioni.</p>
@@ -646,7 +648,8 @@
 
     </div>
 
-    
+    <p class="portfolio-note">// progetti a scopo dimostrativo — sostituiscili quando avrai i tuoi lavori reali da mostrare</p>
+  </div>
 </section>
 
 <section id="process">
