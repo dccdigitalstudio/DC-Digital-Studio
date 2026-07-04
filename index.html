@@ -251,6 +251,7 @@
   .p-visual.c1{background:linear-gradient(160deg,#101c22,#0b1318);}
   .p-visual.c2{background:linear-gradient(160deg,#1d1730,#120e1f);}
   .p-visual.c3{background:linear-gradient(160deg,#0f221f,#0a1615);}
+  .p-visual.c4{background:linear-gradient(160deg,#2a1712,#170d0a);}
   .p-body{padding:24px;flex:1;display:flex;flex-direction:column;}
   .p-meta{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;}
   .p-cat{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--cyan);letter-spacing:0.06em;text-transform:uppercase;}
@@ -268,6 +269,13 @@
   .p-card[data-cat="design"] .p-result .r-value{color:var(--violet);}
   .p-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;}
   .p-tags span{font-family:'JetBrains Mono',monospace;font-size:10.5px;color:var(--muted);border:1px solid var(--line);padding:3px 8px;border-radius:12px;}
+  .p-link{
+    margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:12px;
+    color:var(--cyan);display:inline-flex;align-items:center;gap:6px;
+    transition:gap .2s ease;
+  }
+  .p-card[data-cat="design"] .p-link{color:var(--violet);}
+  .p-link:hover{gap:10px;}
 
   /* ---- fictional project mockups ---- */
   .mock{width:100%;position:relative;z-index:1;}
@@ -343,6 +351,23 @@
   .mock-poster .p-rule{width:60%;height:1px;background:rgba(255,255,255,0.2);}
   .mock-poster .p-sub{height:4px;width:70%;border-radius:2px;background:rgba(255,255,255,0.22);}
   .mock-poster .p-mark{width:14px;height:14px;border-radius:3px;background:var(--cyan);margin-top:auto;}
+
+  .mock-food{width:100%;max-width:210px;margin:0 auto;display:flex;flex-direction:column;gap:10px;}
+  .mock-food .fd-logo{
+    display:flex;align-items:center;justify-content:center;gap:8px;
+    background:linear-gradient(135deg,#e8542c,#b5321a);
+    border-radius:8px;padding:16px 10px;
+    box-shadow:0 20px 40px -20px rgba(0,0,0,0.6);
+  }
+  .mock-food .fd-word{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:#fff3e8;letter-spacing:-0.01em;}
+  .mock-food .fd-bun{width:20px;height:20px;border-radius:50%;background:#f4c869;flex-shrink:0;}
+  .mock-food .fd-row{display:flex;gap:8px;}
+  .mock-food .fd-chip{
+    flex:1;height:30px;border-radius:6px;
+    background:rgba(232,84,44,0.14);border:1px solid rgba(232,84,44,0.3);
+    display:flex;align-items:center;justify-content:center;
+  }
+  .mock-food .fd-chip span{width:14px;height:4px;border-radius:2px;background:rgba(255,255,255,0.35);}
 
   .portfolio-note{
     margin-top:32px;font-size:13px;color:var(--muted);
@@ -524,6 +549,23 @@
 
     <div class="portfolio-grid" id="portfolioGrid">
 
+      <div class="p-card" data-cat="design">
+        <div class="p-visual c4">
+          <div class="mock mock-food">
+            <div class="fd-logo"><span class="fd-bun"></span><span class="fd-word">POLDO</span></div>
+            <div class="fd-row"><span class="fd-chip"><span></span></span><span class="fd-chip"><span></span></span><span class="fd-chip"><span></span></span></div>
+          </div>
+        </div>
+        <div class="p-body">
+          <div class="p-meta"><span class="p-cat">Grafica</span><span class="p-year">2024</span></div>
+          <div class="p-title">Grafica e identità per panineria gourmet</div>
+          <div class="p-client">Cliente — Poldo Panineria</div>
+          <p class="p-desc">Direzione grafica e materiali visivi per il brand "il panino dei campioni", con sedi a Roma e Tivoli: palette, immagine coordinata e contenuti per il sito e i canali delivery.</p>
+          <div class="p-tags"><span>Food Branding</span><span>Palette</span><span>Contenuti Web</span></div>
+          <a href="https://www.poldopanineria.it/" target="_blank" rel="noopener" class="p-link">Vedi il sito →</a>
+        </div>
+      </div>
+
       <div class="p-card" data-cat="dev">
         <div class="p-visual c1">
           <div class="mock mock-browser">
@@ -648,7 +690,7 @@
 
     </div>
 
-
+    
   </div>
 </section>
 
